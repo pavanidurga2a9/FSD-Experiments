@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Experiment 1b - Hyperlinks</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        h1 {
+            color: #2a7ae2;
+        }
+        a {
+            text-decoration: none;
+            color: darkblue;
+        }
+        a:hover {
+            text-decoration: underline;
+            color: #e04a4a;
+        }
+    </style>
+</head>
+<body>
+    <h1>Experiment 1b: Hyperlinks in HTML</h1>
+
+    <p>Below are examples of hyperlinks demonstrating the <code>&lt;a&gt;</code> tag with <code>href</code> and <code>target</code> attributes:</p>
+
+    <ul>
+        <li>
+            <a href="https://www.google.com" target="_blank">
+                Visit Google (opens in new tab)
+            </a>
+        </li>
+        <li>
+            <a href="https://www.wikipedia.org" target="_self">
+                Visit Wikipedia (opens in same tab)
+            </a>
+        </li>
+        <li>
+            <a href="page2.html">
+                Internal Link to page2.html (same folder)
+            </a>
+        </li>
+    </ul>
+
+    <p><strong>Explanation:</strong></p>
+    <ul>
+        <li><code>href</code>: Specifies the URL or path the link goes to.</li>
+        <li><code>target="_blank"</code>: Opens the link in a new browser tab or window.</li>
+        <li><code>target="_self"</code>: Opens the link in the same tab/window (default behavior).</li>
+    </ul>
+</body>
+</html>

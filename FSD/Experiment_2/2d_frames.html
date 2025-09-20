@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>2d - Inline Frames Example</title>
+    <style>
+        body, html {
+            height: 100%;
+            margin: 0;
+        }
+        .container {
+            display: flex;
+            height: 100vh; /* full viewport height */
+        }
+        iframe {
+            border: 1px solid black;
+            flex: 1; /* equal width */
+            height: 100%;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Frame 1: Image -->
+        <iframe srcdoc='
+            <html>
+                <body style="margin:0">
+                    <img src="tokyo.jpg" alt="Tokyo" style="width:100%; height:100%; object-fit: cover;">
+                </body>
+            </html>'
+            title="Image Frame"></iframe>
+
+        <!-- Frame 2: Paragraph -->
+        <iframe srcdoc='
+            <html>
+                <body style="font-family: Arial, sans-serif; padding: 20px;">
+                    <p>This is a paragraph inside the second frame. It explains the content of the frame.</p>
+                </body>
+            </html>'
+            title="Paragraph Frame"></iframe>
+
+        <!-- Frame 3: Link -->
+        <iframe srcdoc='
+            <html>
+                <body style="font-family: Arial, sans-serif; padding: 20px;">
+                    <a href="https://www.example.com" target="_blank">Go to Example.com</a>
+                </body>
+            </html>'
+            title="Link Frame"></iframe>
+    </div>
+</body>
+</html>
+

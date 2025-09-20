@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Experiment 1d - Thumbnail Image Gallery</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #2a7ae2;
+    }
+    .gallery {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      flex-wrap: wrap;
+    }
+    .thumbnail {
+      border: 2px solid #2a7ae2;
+      padding: 5px;
+      border-radius: 8px;
+      transition: transform 0.3s ease;
+      cursor: pointer;
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+    }
+    .thumbnail:hover {
+      transform: scale(1.2);
+      border-color: #e04a4a;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Experiment 1d: Thumbnail Image Gallery</h1>
+
+  <div class="gallery">
+    <a href="tokyo.jpg" target="_blank" title="Tokyo Full Image">
+      <img src="tokyo.jpg" alt="Tokyo" class="thumbnail" />
+    </a>
+    <a href="newyork.jpg" target="_blank" title="New York Full Image">
+      <img src="newyork.jpg" alt="New York" class="thumbnail" />
+    </a>
+    <a href="paris.jpg" target="_blank" title="Paris Full Image">
+      <img src="paris.jpg" alt="Paris" class="thumbnail" />
+    </a>
+  </div>
+
+  <p>Click on any thumbnail to see the full-sized image.</p>
+
+</body>
+</html>

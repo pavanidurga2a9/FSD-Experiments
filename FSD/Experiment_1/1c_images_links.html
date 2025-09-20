@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Experiment 1c - Images with Links</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #2a7ae2;
+    }
+    .profile-img {
+      width: 150px;
+      height: 150px;
+      object-fit: cover;
+      border-radius: 10px;
+      margin: 20px;
+      cursor: pointer;
+      border: 3px solid #2a7ae2;
+      transition: transform 0.3s ease;
+    }
+    .profile-img:hover {
+      transform: scale(1.1);
+      border-color: #e04a4a;
+    }
+  </style>
+</head>
+<body>
+  <h1>Experiment 1c: Images with Links</h1>
+
+  <a href="https://en.wikipedia.org/wiki/Tokyo" target="_blank" title="Tokyo Profile">
+    <img src="tokyo.jpg" alt="Tokyo" class="profile-img" />
+  </a>
+
+  <a href="https://en.wikipedia.org/wiki/New_York_City" target="_blank" title="New York Profile">
+    <img src="newyork.jpg" alt="New York" class="profile-img" />
+  </a>
+
+  <a href="https://en.wikipedia.org/wiki/Paris" target="_blank" title="Paris Profile">
+    <img src="paris.jpg" alt="Paris" class="profile-img" />
+  </a>
+
+  <p>Click on the images to visit their Wikipedia pages.</p>
+</body>
+</html>
