@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Box Model</title>
+    <style>
+        .box {
+            width: 200px;              /* content width */
+            padding: 20px;             /* space inside the box, around content */
+            border: 5px solid #333;    /* border around padding */
+            margin: 30px;              /* space outside the box */
+            background-color: lightblue;
+        }
+
+        /* Additional boxes to show spacing */
+        .box2 {
+            width: 150px;
+            padding: 10px;
+            border: 3px dashed #f00;
+            margin: 15px;
+            background-color: lightgreen;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Box Model Demonstration</h1>
+
+    <div class="box">
+        Content: This is the content area.<br>
+        Padding: 20px<br>
+        Border: 5px solid<br>
+        Margin: 30px
+    </div>
+
+    <div class="box2">
+        Content: Smaller box<br>
+        Padding: 10px<br>
+        Border: 3px dashed<br>
+        Margin: 15px
+    </div>
+
+    <p>The CSS Box Model consists of <strong>content, padding, border, and margin</strong>. 
+       Each layer adds spacing around the inner content.</p>
+</body>
+</html>

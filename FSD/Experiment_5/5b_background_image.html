@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Background Image</title>
+    <style>
+        body {
+            height: 1500px; /* so we can scroll */
+            background-image: url("background.jpg");
+            background-repeat: repeat-x; /* repeat horizontally */
+            background-attachment: fixed; /* stays in place when scrolling */
+            background-position: center 50%; /* halfway down the page, horizontally centered */
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 50px;
+            color: white;
+            background: rgba(0,0,0,0.5);
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h1>CSS Background Image Example</h1>
+    <p style="text-align:center; margin-top:600px;">
+        Scroll down to see the background image stays fixed.
+    </p>
+</body>
+</html>
