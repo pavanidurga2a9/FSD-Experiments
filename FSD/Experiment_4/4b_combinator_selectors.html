@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Combinator Selectors Example</title>
+    <style>
+        /* Descendant selector (space) */
+        div p {
+            color: blue;
+        }
+
+        /* Child selector (>) */
+        div > p {
+            background-color: yellow;
+        }
+
+        /* Adjacent sibling selector (+) */
+        h2 + p {
+            color: red;
+        }
+
+        /* General sibling selector (~) */
+        h3 ~ p {
+            font-style: italic;
+            color: green;
+        }
+    </style>
+</head>
+<body>
+    <h1>Combinator Selector Demo</h1>
+
+    <div>
+        <p>This paragraph is inside a div (descendant & child selector).</p>
+        <section>
+            <p>This is inside a section within div (only descendant, not child).</p>
+        </section>
+    </div>
+
+    <h2>Heading 2</h2>
+    <p>This paragraph is an adjacent sibling of h2.</p>
+    <p>This one is NOT directly adjacent to h2.</p>
+
+    <h3>Heading 3</h3>
+    <p>This paragraph is a general sibling of h3.</p>
+    <p>Another general sibling of h3.</p>
+</body>
+</html>
+
