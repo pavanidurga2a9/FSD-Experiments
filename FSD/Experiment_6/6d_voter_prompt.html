@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>6d: Voter Eligibility Checker</title>
+  <style>
+    table {
+      border-collapse: collapse;
+      margin-top: 20px;
+      width: 50%;
+    }
+    th, td {
+      border: 1px solid #444;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #f0f0f0;
+    }
+  </style>
+</head>
+<body>
+  <h1>Voter Eligibility Check</h1>
+  <button onclick="checkVoter()">Check Voter Eligibility</button>
+
+  <div id="result"></div>
+
+  <script>
+    function checkVoter() {
+      const name = prompt("Enter your name:");
+      let age = prompt("Enter your age:");
+
+      // Convert age to a number
+      age = parseInt(age);
+
+      // Check if age is a valid number
+      if (isNaN(age) || age <= 0) {
+        alert("Invalid age entered. Please try again.");
+        return;
+      }
+
+      // Determine eligibility
+      const eligibility = age >= 18 ? "Eligible to Vote" : "Not Eligible to Vote";
+
+      // Display the result in a table
+      const tableHTML = `
+        <table>
+          <tr>
+            <th>Name</th>
+            <td>${name}</td>
+          </tr>
+          <tr>
+            <th>Age</th>
+            <td>${age}</td>
+          </tr>
+          <tr>
+            <th>Voting Status</th>
+            <td>${eligibility}</td>
+          </tr>
+        </table>
+      `;
+
+      document.getElementById("result").innerHTML = tableHTML;
+    }
+  </script>
+</body>
+</html>

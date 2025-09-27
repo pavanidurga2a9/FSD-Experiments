@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>6c: JavaScript Input Methods</title>
+</head>
+<body>
+  <h1>JavaScript Input Methods</h1>
+
+  <!-- HTML Input Field -->
+  <label for="nameInput">Enter your name (HTML input):</label>
+  <input type="text" id="nameInput" placeholder="Your name here" />
+  <button onclick="readHTMLInput()">Read HTML Input</button>
+  <p id="htmlOutput"></p>
+
+  <hr />
+
+  <button onclick="readPromptInput()">Input via prompt()</button>
+  <p id="promptOutput"></p>
+
+  <hr />
+
+  <button onclick="readConfirmInput()">Input via confirm()</button>
+  <p id="confirmOutput"></p>
+
+  <script>
+    // 1. Read from HTML input field
+    function readHTMLInput() {
+      const name = document.getElementById("nameInput").value;
+      document.getElementById("htmlOutput").innerText = "You entered: " + name;
+    }
+
+    // 2. Read input via prompt()
+    function readPromptInput() {
+      const age = prompt("Enter your age:");
+      document.getElementById("promptOutput").innerText = "You entered age: " + age;
+    }
+
+    // 3. Read boolean input via confirm()
+    function readConfirmInput() {
+      const isStudent = confirm("Are you a student?");
+      const message = isStudent ? "You confirmed: Yes, you are a student." : "You confirmed: No, you are not a student.";
+      document.getElementById("confirmOutput").innerText = message;
+    }
+  </script>
+</body>
+</html>
