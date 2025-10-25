@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head><title>Functions with Buttons</title></head>
+<body>
+<h2>Number Operations</h2>
+<input type="text" id="num" placeholder="Enter a number">
+<button onclick="showFactorial()">Factorial</button>
+<button onclick="showFibonacci()">Fibonacci</button>
+<button onclick="showPrime()">Prime</button>
+<button onclick="showPalindrome()">Palindrome</button>
+<p id="result"></p>
+
+<script>
+function factorial(n){
+  let f = 1;
+  for(let i=1; i<=n; i++) f *= i;
+  return f;
+}
+function fibonacci(n){
+  let fib=[0,1];
+  for(let i=2; i<n; i++) fib[i]=fib[i-1]+fib[i-2];
+  return fib.slice(0,n).join(", ");
+}
+function primes(n){
+  let arr=[];
+  for(let i=2; i<=n; i++){
+    let isPrime=true;
+    for(let j=2; j<=Math.sqrt(i); j++){
+      if(i%j==0){isPrime=false;break;}
+    }
+    if(isPrime) arr.push(i);
+  }
+  return arr.join(", ");
+}
+function isPalindrome(n){
+  let str=n.toString();
+  return str===str.split("").reverse().join("");
+}
+
+function showFactorial(){
+  let n=parseInt(document.getElementById("num").value);
+  document.getElementById("result").innerHTML="Factorial: "+factorial(n);
+}
+function showFibonacci(){
+  let n=parseInt(document.getElementById("num").value);
+  document.getElementById("result").innerHTML="Fibonacci: "+fibonacci(n);
+}
+function showPrime(){
+  let n=parseInt(document.getElementById("num").value);
+  document.getElementById("result").innerHTML="Prime numbers: "+primes(n);
+}
+function showPalindrome(){
+  let n=document.getElementById("num").value;
+  document.getElementById("result").innerHTML=isPalindrome(n) ? "Palindrome Number" : "Not a Palindrome";
+}
+</script>
+</body>
+</html>
