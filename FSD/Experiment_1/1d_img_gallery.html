@@ -1,57 +1,55 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Experiment 1d - Thumbnail Image Gallery</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      margin: 20px;
-      text-align: center;
-    }
-    h1 {
-      color: #2a7ae2;
-    }
-    .gallery {
-      display: flex;
-      justify-content: center;
-      gap: 15px;
-      flex-wrap: wrap;
-    }
-    .thumbnail {
-      border: 2px solid #2a7ae2;
-      padding: 5px;
-      border-radius: 8px;
-      transition: transform 0.3s ease;
-      cursor: pointer;
-      width: 100px;
-      height: 100px;
-      object-fit: cover;
-    }
-    .thumbnail:hover {
-      transform: scale(1.2);
-      border-color: #e04a4a;
-    }
-  </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Image Gallery with Thumbnails</title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    text-align: center;
+  }
+  .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+  }
+  .gallery a img {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    transition: transform 0.2s;
+  }
+  .gallery a img:hover {
+    transform: scale(1.1);
+    border-color: #333;
+  }
+</style>
 </head>
 <body>
-
-  <h1>Experiment 1d: Thumbnail Image Gallery</h1>
-
-  <div class="gallery">
-    <a href="tokyo.jpg" target="_blank" title="Tokyo Full Image">
-      <img src="tokyo.jpg" alt="Tokyo" class="thumbnail" />
-    </a>
-    <a href="newyork.jpg" target="_blank" title="New York Full Image">
-      <img src="newyork.jpg" alt="New York" class="thumbnail" />
-    </a>
-    <a href="paris.jpg" target="_blank" title="Paris Full Image">
-      <img src="paris.jpg" alt="Paris" class="thumbnail" />
-    </a>
-  </div>
-
-  <p>Click on any thumbnail to see the full-sized image.</p>
-
+<h1>Image Gallery</h1>
+<div class="gallery">
+  <a href="https://picsum.photos/id/1015/800/600" target="_blank">
+    <img src="https://picsum.photos/id/1015/100/100" alt="Image 1">
+  </a>
+  <a href="https://picsum.photos/id/1016/800/600" target="_blank">
+    <img src="https://picsum.photos/id/1016/100/100" alt="Image 2">
+  </a>
+  <a href="https://picsum.photos/id/1020/800/600" target="_blank">
+    <img src="https://picsum.photos/id/1020/100/100" alt="Image 3">
+  </a>
+  <a href="https://picsum.photos/id/1024/800/600" target="_blank">
+    <img src="https://picsum.photos/id/1024/100/100" alt="Image 4">
+  </a>
+  <a href="https://picsum.photos/id/1035/800/600" target="_blank">
+    <img src="https://picsum.photos/id/1035/100/100" alt="Image 5">
+  </a>
+</div>
 </body>
 </html>
+
