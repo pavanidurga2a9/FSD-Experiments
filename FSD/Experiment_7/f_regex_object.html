@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head><title>RegExp Object Example</title></head>
+<body>
+<h2>RegExp Object Example</h2>
+<script>
+let str = "My number is 98765 and your number is 12345";
+let pattern = /\d+/g;
+let result = str.match(pattern);
+document.write("Original String: " + str + "<br>");
+document.write("Numbers Found: " + result.join(", ") + "<br>");
+document.write("Replaced: " + str.replace(/\d+/g, "#####") + "<br>");
+</script>
+</body>
+</html>
