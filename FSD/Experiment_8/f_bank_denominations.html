@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head><title>Bank Denominations</title></head>
+<body>
+<h2>Bank Denomination Calculator</h2>
+<script>
+let amount = parseInt(prompt("Enter the deposited amount:"));
+let denominations = [100, 50, 20, 10, 5, 2, 1];
+
+document.write("Amount: Rs. " + amount + "<br><br>");
+for(let i=0; i<denominations.length; i++) {
+  let count = Math.floor(amount / denominations[i]);
+  if(count > 0) {
+    document.write(count + " - " + denominations[i] + "'s<br>");
+  }
+  amount %= denominations[i];
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head><title>Object Loops Example</title></head>
+<body>
+<h2>Display Object Data using Different Loops</h2>
+<script>
+let person = {name: "John", age: 25, city: "New York"};
+
+document.write("<h3>Using for-in loop:</h3>");
+for(let key in person) {
+  document.write(key + ": " + person[key] + "<br>");
+}
+
+document.write("<h3>Using forEach loop (with array):</h3>");
+let numbers = [10, 20, 30, 40];
+numbers.forEach(num => document.write(num + "<br>"));
+
+document.write("<h3>Using for-of loop:</h3>");
+for(let n of numbers) {
+  document.write(n + "<br>");
+}
+</script>
+</body>
+</html>
