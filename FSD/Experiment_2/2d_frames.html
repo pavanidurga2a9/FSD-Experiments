@@ -1,52 +1,50 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>2d - Inline Frames Example</title>
-    <style>
-        body, html {
-            height: 100%;
-            margin: 0;
-        }
-        .container {
-            display: flex;
-            height: 100vh; /* full viewport height */
-        }
-        iframe {
-            border: 1px solid black;
-            flex: 1; /* equal width */
-            height: 100%;
-        }
-    </style>
+    <title>Frames Example</title>
 </head>
 <body>
-    <div class="container">
-        <!-- Frame 1: Image -->
-        <iframe srcdoc='
-            <html>
-                <body style="margin:0">
-                    <img src="tokyo.jpg" alt="Tokyo" style="width:100%; height:100%; object-fit: cover;">
-                </body>
-            </html>'
-            title="Image Frame"></iframe>
+    <h2>HTML Program to Explain the Working of Frames</h2>
 
-        <!-- Frame 2: Paragraph -->
-        <iframe srcdoc='
-            <html>
-                <body style="font-family: Arial, sans-serif; padding: 20px;">
-                    <p>This is a paragraph inside the second frame. It explains the content of the frame.</p>
-                </body>
-            </html>'
-            title="Paragraph Frame"></iframe>
+    <h3>Page Divided into 3 Parts (Top to Bottom)</h3>
+    <table border="1" width="100%" height="400">
+        <tr height="33%">
+            <td align="center">
+                <h4>Frame 1: Image</h4>
+                <img src="https://www.w3schools.com/html/pic_trulli.jpg" width="300" height="150">
+            </td>
+        </tr>
+        <tr height="33%">
+            <td align="center">
+                <h4>Frame 2: Paragraph</h4>
+                <p>This is the second frame. Frames divide the browser window into multiple sections, each displaying its own content independently.</p>
+            </td>
+        </tr>
+        <tr height="34%">
+            <td align="center">
+                <h4>Frame 3: Hyperlink</h4>
+                <a href="https://www.wikipedia.org" target="_blank">Visit Wikipedia</a>
+            </td>
+        </tr>
+    </table>
 
-        <!-- Frame 3: Link -->
-        <iframe srcdoc='
-            <html>
-                <body style="font-family: Arial, sans-serif; padding: 20px;">
-                    <a href="https://www.example.com" target="_blank">Go to Example.com</a>
-                </body>
-            </html>'
-            title="Link Frame"></iframe>
-    </div>
+    <h3>Page Divided into 3 Parts (Left to Right)</h3>
+    <table border="1" width="100%" height="200">
+        <tr>
+            <td width="33%" align="center">
+                <h4>Frame 1: Image</h4>
+                <img src="https://www.w3schools.com/html/img_girl.jpg" width="150" height="100">
+            </td>
+            <td width="34%" align="center">
+                <h4>Frame 2: Paragraph</h4>
+                <p>This is another example dividing the page horizontally into three frames.</p>
+            </td>
+            <td width="33%" align="center">
+                <h4>Frame 3: Hyperlink</h4>
+                <a href="https://www.google.com" target="_blank">Visit Google</a>
+            </td>
+        </tr>
+    </table>
 </body>
 </html>
 
