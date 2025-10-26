@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>CSS Selector Forms</title>
+<style>
+/* Simple selectors */
+p { color: blue; }
+#one { color: red; }
+.important { background: yellow; }
+h1, h2 { color: green; }
+* { font-family: Arial; }
+
+/* Combinator selectors */
+div p { color: purple; }      /* descendant */
+div > span { color: orange; } /* child */
+h3 + p { color: teal; }       /* adjacent sibling */
+h4 ~ p { color: brown; }      /* general sibling */
+
+/* Pseudo-class */
+a:hover { color: red; }
+
+/* Pseudo-element */
+p::first-line { font-weight: bold; }
+
+/* Attribute selector */
+input[type="text"] { border: 2px solid blue; }
+</style>
+</head>
+<body>
+
+<h1>CSS Selector Example</h1>
+<h2>Simple Selectors</h2>
+<p>This is a paragraph.</p>
+<p id="one">This uses ID selector.</p>
+<p class="important">This uses Class selector.</p>
+
+<h2>Combinator Selectors</h2>
+<div>
+  <p>Paragraph inside div (descendant).</p>
+  <span>Span inside div (child).</span>
+</div>
+<h3>Heading 3</h3>
+<p>Adjacent sibling of h3.</p>
+<h4>Heading 4</h4>
+<p>General sibling of h4.</p>
+
+<h2>Pseudo and Attribute Selectors</h2>
+<a href="#">Hover over this link</a><br><br>
+<p>This paragraph uses a pseudo-element selector.</p>
+<input type="text" placeholder="Type here">
+
+</body>
+</html>
