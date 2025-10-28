@@ -1,13 +1,37 @@
 <!DOCTYPE html>
 <html>
-<head><title>Math Object Example</title></head>
+<head>
+  <title>Math Object Example</title>
+</head>
 <body>
-<h2>Math Object Example</h2>
-<script>
-document.write("PI: " + Math.PI + "<br>");
-document.write("Square Root of 81: " + Math.sqrt(81) + "<br>");
-document.write("Random (1–100): " + Math.floor(Math.random() * 100 + 1) + "<br>");
-document.write("Power(3,4): " + Math.pow(3,4) + "<br>");
-</script>
+  <h2>JavaScript Math Object Properties and Methods</h2>
+
+  <button onclick="showConstants()">Show Constants</button>
+  <button onclick="showMethods()">Show Methods</button>
+
+  <h3>Output:</h3>
+  <p id="result"></p>
+
+  <script>
+    function showConstants() {
+      document.getElementById("result").innerHTML =
+        "Math.PI = " + Math.PI + "<br>" +
+        "Math.E = " + Math.E;
+    }
+
+    function showMethods() {
+      let num = 9.7;
+      let output =
+        "Number: " + num + "<br>" +
+        "Square Root: " + Math.sqrt(16) + "<br>" +
+        "Power (3²): " + Math.pow(3, 2) + "<br>" +
+        "Round: " + Math.round(num) + "<br>" +
+        "Ceil: " + Math.ceil(num) + "<br>" +
+        "Floor: " + Math.floor(num) + "<br>" +
+        "Random (0–1): " + Math.random();
+      document.getElementById("result").innerHTML = output;
+    }
+  </script>
 </body>
 </html>
+
