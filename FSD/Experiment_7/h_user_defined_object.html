@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head><title>User-defined Object Example</title></head>
+<body>
+<h2>User-defined Object Example</h2>
+<script>
+function Student(name, age, marks) {
+  this.name = name;
+  this.age = age;
+  this.marks = marks;
+  this.display = function() {
+    return this.name + " is " + this.age + " years old with marks " + this.marks;
+  };
+  Object.defineProperty(this, "info", {
+    get: function() { return this.name + " (" + this.age + ")"; },
+    set: function(value) { [this.name, this.age] = value.split(" "); }
+  });
+}
+let s1 = new Student("John", 20, 85);
+document.write("Student Info: " + s1.display() + "<br>");
+s1.info = "Alice 22";
+document.write("Updated Info: " + s1.display() + "<br>");
+</script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Array Object Example</title>
+</head>
+<body>
+    <h2>JavaScript Array Object Properties and Methods</h2>
+
+    <button onclick="showArray()">Show Array</button>
+    <button onclick="addElement()">Push</button>
+    <button onclick="removeElement()">Pop</button>
+    <button onclick="sortArray()">Sort</button>
+    <button onclick="reverseArray()">Reverse</button>
+    <button onclick="joinArray()">Join</button>
+
+    <h3>Output:</h3>
+    <p id="result"></p>
+
+    <script>
+        let fruits = ["Apple", "Banana", "Mango"];
+
+        function showArray() {
+            document.getElementById("result").innerHTML = "Array: " + fruits + "<br>Length: " + fruits.length;
+        }
+
+        function addElement() {
+            fruits.push("Orange");
+            document.getElementById("result").innerHTML = "After push(): " + fruits;
+        }
+
+        function removeElement() {
+            fruits.pop();
+            document.getElementById("result").innerHTML = "After pop(): " + fruits;
+        }
+
+        function sortArray() {
+            fruits.sort();
+            document.getElementById("result").innerHTML = "After sort(): " + fruits;
+        }
+
+        function reverseArray() {
+            fruits.reverse();
+            document.getElementById("result").innerHTML = "After reverse(): " + fruits;
+        }
+
+        function joinArray() {
+            document.getElementById("result").innerHTML = "After join(' - '): " + fruits.join(" - ");
+        }
+    </script>
+</body>
+</html>

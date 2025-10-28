@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>RegExp Object Example</title>
+  <style>
+    body { font-family: Arial; margin: 30px; }
+    button { display: block; margin: 5px 0; }
+    pre { background: #f4f4f4; padding: 8px; border: 1px solid #ccc; }
+  </style>
+</head>
+<body>
+
+<h2>JavaScript RegExp Object Properties and Methods</h2>
+<p>String: "The quick brown fox jumps over the lazy dog."</p>
+
+<button onclick="showProps()">Show Properties</button>
+<button onclick="testPattern()">Test Pattern</button>
+<button onclick="execPattern()">Execute Pattern</button>
+<button onclick="replaceText()">Replace Text</button>
+
+<h3>Output:</h3>
+<pre id="output"></pre>
+
+<script>
+  const str = "The quick brown fox jumps over the lazy dog.";
+  const reg = /o\w*/gi; // matches 'o' followed by word characters
+
+  function showProps() {
+    document.getElementById("output").textContent = 
+      "Pattern: " + reg.source + "\nFlags: " + reg.flags;
+  }
+
+  function testPattern() {
+    let result = reg.test(str);
+    reg.lastIndex = 0;
+    document.getElementById("output").textContent = 
+      "Pattern found? " + result;
+  }
+
+  function execPattern() {
+    reg.lastIndex = 0;
+    let match = reg.exec(str);
+    document.getElementById("output").textContent = 
+      match ? "Found: " + match[0] + " at index " + match.index : "No match found";
+  }
+
+  function replaceText() {
+    let newStr = str.replace(reg, "###");
+    document.getElementById("output").textContent = 
+      "After replace:\n" + newStr;
+  }
+</script>
+
+</body>
+</html>

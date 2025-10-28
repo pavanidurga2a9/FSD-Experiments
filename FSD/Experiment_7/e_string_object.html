@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>String Object Example</title>
+  <style>
+    body {
+      font-family: Arial;
+      margin: 30px;
+    }
+    button {
+      display: block;
+      margin: 6px 0;
+      padding: 5px 10px;
+    }
+    #result {
+      border: 1px solid #ccc;
+      padding: 8px;
+      background: #f2f2f2;
+      margin-top: 10px;
+      min-height: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <h2>JavaScript String Object Demo</h2>
+
+  <button onclick="showPi()">Show PI</button>
+  <button onclick="findSqrt()">Square Root</button>
+  <button onclick="roundNum()">Round Number</button>
+  <button onclick="randomNum()">Random Number</button>
+
+  <h3>Output:</h3>
+  <div id="result"></div>
+
+  <script>
+    function showPi() {
+      document.getElementById("result").innerText = "Value of PI: " + Math.PI;
+    }
+
+    function findSqrt() {
+      let num = 25;
+      document.getElementById("result").innerText = "√" + num + " = " + Math.sqrt(num);
+    }
+
+    function roundNum() {
+      let num = 7.6;
+      document.getElementById("result").innerText =
+        "Original: " + num + "\nRounded: " + Math.round(num);
+    }
+
+    function randomNum() {
+      document.getElementById("result").innerText =
+        "Random number (0–100): " + Math.floor(Math.random() * 101);
+    }
+  </script>
+
+</body>
+</html>

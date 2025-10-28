@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Date Object Example</title>
+  <style>
+    body { font-family: Arial; margin: 30px; }
+    button { margin: 5px 0; display: block; }
+    pre { background: #f4f4f4; padding: 8px; border: 1px solid #ccc; }
+  </style>
+</head>
+<body>
+
+<h2>JavaScript Date Object Properties and Methods</h2>
+
+<button onclick="showDate()">Show Current Date & Time</button>
+<button onclick="getDateParts()">Get Date Details</button>
+<button onclick="setDateParts()">Set Date</button>
+<button onclick="formatDate()">Format Date</button>
+
+<h3>Output:</h3>
+<pre id="output"></pre>
+
+<script>
+let d = new Date();
+
+function showDate() {
+  d = new Date();
+  document.getElementById("output").textContent =
+    "Current Date & Time:\n" + d;
+}
+
+function getDateParts() {
+  let days = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+  let text = 
+    "Year: " + d.getFullYear() +
+    "\nMonth: " + (d.getMonth()+1) +
+    "\nDate: " + d.getDate() +
+    "\nDay: " + days[d.getDay()] +
+    "\nHours: " + d.getHours() +
+    "\nMinutes: " + d.getMinutes() +
+    "\nSeconds: " + d.getSeconds();
+  document.getElementById("output").textContent = text;
+}
+
+function setDateParts() {
+  d.setFullYear(2025, 11, 25);
+  d.setHours(10, 30, 0);
+  document.getElementById("output").textContent =
+    "Date set to:\n" + d;
+}
+
+function formatDate() {
+  let pad = n => n.toString().padStart(2, "0");
+  let f = `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())} ` +
+          `${pad(d.getHours())}:${pad(d.getMinutes())}:${pad(d.getSeconds())}`;
+  document.getElementById("output").textContent = "Formatted Date:\n" + f;
+}
+</script>
+
+</body>
+</html>
